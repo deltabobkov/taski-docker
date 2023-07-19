@@ -9,7 +9,7 @@ on:
 jobs:
   tests:
     # Разворачиваем окружение:
-  v  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
     # Копируем код проекта
@@ -31,5 +31,4 @@ jobs:
     - name: Test with flake8
       # Вызываем flake8 и указываем ему,
       # что нужно проверить файлы только в папке backend/
-      run: echo $PWD 
-      #python -m flake8 backend/git add .github/workflows/main.yml
+      run: python -m flake8 backend/
